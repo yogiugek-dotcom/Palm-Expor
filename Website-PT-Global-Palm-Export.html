@@ -1,0 +1,2207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PT Global Palm Export Indonesia | Sustainable Palm Oil for Global Markets</title>
+<meta name="description" content="Trusted International Palm Oil Export Partner with Certified Quality and Reliable Global Logistics. RSPO & ISPO certified exporter serving 50+ countries.">
+<meta name="keywords" content="palm oil export, CPO, RSPO, ISPO, sustainable palm oil, Indonesia export, global logistics">
+<meta name="author" content="PT Global Palm Export Indonesia">
+<meta name="theme-color" content="#0B1F33">
+<meta property="og:title" content="PT Global Palm Export Indonesia | Sustainable Palm Oil for Global Markets">
+<meta property="og:description" content="Trusted International Palm Oil Export Partner with Certified Quality and Reliable Global Logistics. RSPO & ISPO certified exporter serving 50+ countries.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="./cpo-product.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PT Global Palm Export Indonesia | Sustainable Palm Oil for Global Markets">
+<meta name="twitter:description" content="Trusted International Palm Oil Export Partner with Certified Quality and Reliable Global Logistics. RSPO & ISPO certified exporter serving 50+ countries.">
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Google Fonts: Plus Jakarta Sans & Manrope -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+<!-- Three.js for 3D Globe -->
+<script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+
+<!-- Leaflet CSS & JS for Interactive Map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+<style>
+  :root {
+    --emerald: #0F5132;
+    --gold: #D4A017;
+    --navy: #0B1F33;
+    --white: #FFFFFF;
+  }
+  
+  * {
+    font-family: 'Manrope', sans-serif;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    overflow-anchor: none;
+  }
+
+  body {
+    overflow-anchor: none;
+  }
+
+  /* prevent layout shifts from causing scroll jumps */
+  section, .glass-dark, .supply-flow-scroll, #detail-media {
+    overflow-anchor: none;
+  }
+  
+  h1, h2, h3, h4, h5 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  
+  .glass {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .glass-dark {
+    background: rgba(11, 31, 51, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(212, 160, 23, 0.2);
+  }
+  
+  .glass-emerald {
+    background: rgba(15, 81, 50, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(212, 160, 23, 0.3);
+  }
+  
+  .hero-gradient {
+    background: linear-gradient(135deg, rgba(11, 31, 51, 0.9) 0%, rgba(15, 81, 50, 0.7) 100%);
+  }
+  
+  #hero-title {
+    line-height: 1.18 !important;
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.03em;
+    word-break: break-word;
+    max-width: 100%;
+  }
+
+  #hero-title span {
+    display: inline-block;
+  }
+
+  #hero-subtitle {
+    line-height: 1.8;
+    margin-top: 1.2rem;
+    max-width: 820px;
+    letter-spacing: 0.01em;
+  }
+  
+  .gold-gradient {
+    background: linear-gradient(135deg, #D4A017 0%, #F4C430 100%);
+  }
+  
+  .text-gold {
+    color: var(--gold);
+  }
+  
+  .bg-emerald {
+    background-color: var(--emerald);
+  }
+  
+  .bg-navy {
+    background-color: var(--navy);
+  }
+  
+  .border-gold {
+    border-color: var(--gold);
+  }
+  
+  .hover-gold:hover {
+    color: var(--gold);
+    transition: all 0.3s ease;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  .dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+  }
+  
+  .supply-line {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+  
+  .parallax-bg {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .chat-bubble {
+    animation: slideIn 0.3s ease-out;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 3px;
+  }
+  
+  #globe-container canvas {
+    outline: none;
+  }
+  
+  .leaflet-container {
+    background: rgba(11, 31, 51, 0.9);
+  }
+  
+  .leaflet-popup-content-wrapper {
+    background: rgba(15, 81, 50, 0.95);
+    color: white;
+    border: 1px solid var(--gold);
+  }
+  
+  .leaflet-popup-tip {
+    background: var(--emerald);
+  }
+
+  /* Product image improvements */
+  .product-image-wrapper { position: relative; overflow: hidden; height: 100%; }
+  .product-image { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.5s ease; display:block; }
+  .product-image-wrapper:hover .product-image { transform: scale(1.06); }
+  .product-image-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,31,51,0) 30%, rgba(11,31,51,0.55) 100%); pointer-events: none; }
+  .product-badge { position: absolute; top: 10px; right: 12px; z-index: 3; }
+  .product-caption { position: absolute; left: 16px; bottom: 12px; z-index: 3; color: #fff; font-weight: 700; text-shadow: 0 6px 18px rgba(0,0,0,0.6); }
+
+  /* Supply chain section enhancements */
+  .chain-pill { background: rgba(255,255,255,0.04); border: 1px solid rgba(212,160,23,0.18); box-shadow: 0 24px 80px rgba(0,0,0,0.08); }
+  .chain-pill-icon { width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background: rgba(212,160,23,0.15); color: #F4C430; font-size: 20px; margin-bottom: 0.75rem; }
+  /* refined icon circle: simple, subtle, professional */
+  .chain-pill-icon {
+    width: 56px;
+    height: 56px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: linear-gradient(180deg, rgba(212,160,23,0.06), rgba(212,160,23,0.02));
+    color: var(--gold);
+    font-size: 22px;
+    margin-bottom: 0.75rem;
+    border: 1px solid rgba(212,160,23,0.12);
+    box-shadow: 0 8px 30px rgba(2,6,23,0.45);
+  }
+  .supply-flow-scroll { overflow-x: auto; overflow-y: hidden; padding: 2rem 2rem; gap: 1.3rem; scroll-padding-inline: 2rem; -ms-overflow-style: none; scrollbar-width: none; }
+  /* hide all visible scrollbars but keep scrolling functional */
+  .supply-flow-scroll::-webkit-scrollbar { display: none; height: 0; }
+  .supply-step-button { min-width: 200px; flex: 0 0 auto; display: inline-flex; align-items: center; gap: 0.85rem; padding: 1.25rem 1.5rem; border: 1px solid rgba(255,255,255,0.2); background: rgba(20, 40, 70, 0.98); color: #F7F7F7; border-radius: 2.5rem; transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease; box-shadow: 0 22px 60px rgba(0,0,0,0.25); backdrop-filter: blur(18px); }
+  .supply-step-button:hover { transform: translateY(-3px) scale(1.01); border-color: rgba(212,160,23,0.6); background: rgba(30, 50, 82, 0.98); }
+  .supply-step-button.active { background: rgba(30, 51, 86, 1); border-color: rgba(212,160,23,0.65); box-shadow: 0 30px 90px rgba(212,160,23,0.22); transform: translateY(-8px); }
+  .supply-step-button .icon { width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background: rgba(212,160,23,0.18); color: #F4C430; }
+  .supply-step-button .icon i { width: 18px; height: 18px; }
+  .supply-step-button .label { display: grid; gap: 0.2rem; text-align: left; }
+  .supply-step-button .label strong { display: block; font-size: 0.95rem; color: #FFFFFE; }
+  .supply-step-button .label span { font-size: 0.82rem; color: #D8D8D8; }
+  .supply-step-button { box-shadow: 0 16px 40px rgba(0,0,0,0.18); }
+  .supply-step-button.active { transform: translateY(-6px); }
+  #supply-chain-carousel { position: static; }
+  .supply-progress-track { display: none; }
+  .supply-progress-bar { display: none; }
+  .supply-detail-metric { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 1.5rem; padding: 1rem; }
+  .supply-detail-metric p:first-child { color: #B8B8B8; letter-spacing: 0.12em; font-size: 0.72rem; text-transform: uppercase; margin-bottom: 0.35rem; }
+  .supply-detail-metric p:last-child { font-size: 1.35rem; font-weight: 700; color: #fff; }
+  #detail-image { min-height: 320px; }
+  .supply-info-card { min-height: 180px; }
+
+  /* Detail media crossfade */
+  #detail-media { position: relative; overflow: hidden; min-height: 320px; }
+  #detail-media img, #detail-media video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 600ms cubic-bezier(.2,.9,.3,1); opacity: 0; }
+  #detail-media video { display: block; }
+  #detail-media .media-visible { opacity: 1; z-index: 2; }
+  #detail-media .media-hidden { opacity: 0; z-index: 1; pointer-events: none; }
+  #detail-media .fade-overlay { position: absolute; inset: 0; background: rgba(5,10,20,0.25); backdrop-filter: blur(6px); opacity: 0; transition: opacity 360ms cubic-bezier(.2,.9,.3,1); z-index: 3; pointer-events: none; }
+  #detail-media .fade-overlay.media-visible { opacity: 1; }
+  /* ensure overlay doesn't stay above media when hidden */
+  #detail-media .fade-overlay.media-hidden { z-index: 0; }
+
+  /* Hero SVG animation */
+  .hero-animation { position: absolute; inset: 0; overflow: hidden; z-index: 0; }
+  .hero-animation svg { width: 100%; height: 100%; display: block; }
+  .ship { fill: #0b1f33; opacity: 0.95; transform-origin: 50% 50%; }
+  .wave { fill: rgba(15,81,50,0.25); }
+  .wave.wave-back { animation: waveMove 8s linear infinite; }
+  .wave.wave-front { animation: waveMove 6s linear infinite reverse; }
+  @keyframes waveMove { from { transform: translateX(0); } to { transform: translateX(-25%); } }
+  .oil-drop { fill: #d4a017; opacity: 0.95; animation: dropFade 2s ease-in-out infinite; }
+  @keyframes dropFade { 0% { transform: translateY(-20%) scale(0.9); opacity: 0.9 } 50% { transform: translateY(40%) scale(1.05); opacity: 0.6 } 100% { transform: translateY(-20%) scale(0.9); opacity: 0.9 } }
+</style>
+</head>
+<body class="bg-navy text-white overflow-x-hidden">
+  
+  <!-- Navigation -->
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300">
+    <div class="glass-dark">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <!-- Logo -->
+          <div class="flex items-center space-x-3">
+            <div class="w-12 h-12 rounded-lg gold-gradient flex items-center justify-center">
+              <i data-lucide="leaf" class="w-7 h-7 text-navy"></i>
+            </div>
+            <div>
+              <div class="font-bold text-lg leading-tight">PT Global Palm</div>
+              <div class="text-xs text-gold">Export Indonesia</div>
+            </div>
+          </div>
+          
+          <!-- Desktop Menu -->
+          <div class="hidden lg:flex items-center space-x-8">
+            <a href="#home" class="nav-link relative hover-gold text-sm font-medium">Home</a>
+            
+            <div class="dropdown relative">
+              <button class="nav-link relative hover-gold text-sm font-medium flex items-center">
+                About Us <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+              </button>
+              <div class="dropdown-menu absolute top-full left-0 mt-2 w-56 glass-dark rounded-xl p-2">
+                <a href="#about" class="block px-4 py-2 rounded-lg hover:bg-white/10 text-sm">Company Profile</a>
+                <a href="#about" class="block px-4 py-2 rounded-lg hover:bg-white/10 text-sm">Vision & Mission</a>
+                <a href="#about" class="block px-4 py-2 rounded-lg hover:bg-white/10 text-sm">Our History</a>
+                <a href="#leadership" class="block px-4 py-2 rounded-lg hover:bg-white/10 text-sm">Leadership Team</a>
+                <a href="#global" class="block px-4 py-2 rounded-lg hover:bg-white/10 text-sm">Global Presence</a>
+              </div>
+            </div>
+            
+            <div class="dropdown relative">
+              <button class="nav-link relative hover-gold text-sm font-medium flex items-center">
+                Products <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+              </button>
+              <div class="dropdown-menu absolute top-full left-0 mt-2 w-56 glass-dark rounded-xl p-2">
+                <a href="#products" class="block px-4 py-2 rounded-lg hover:bg-white/10 text-sm">CPO - Crude Palm Oil</a>
+                <a href="#products" class="block px-4 py-2 rounded-lg hover:bg-white/10 text-sm">Palm Kernel Oil</a>
+                <a href="#products" class="block px-4 py-2 rounded-lg hover:bg-white/10 text-sm">Refined Palm Oil</a>
+                <a href="#products" class="block px-4 py-2 rounded-lg hover:bg-white/10 text-sm">Palm Olein</a>
+                <a href="#products" class="block px-4 py-2 rounded-lg hover:bg-white/10 text-sm">Palm Stearin</a>
+                <a href="#products" class="block px-4 py-2 rounded-lg hover:bg-white/10 text-sm">Biodiesel Feedstock</a>
+              </div>
+            </div>
+            
+            <div class="dropdown relative">
+              <button class="nav-link relative hover-gold text-sm font-medium flex items-center">
+                Sustainability <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+              </button>
+              <div class="dropdown-menu absolute top-full left-0 mt-2 w-56 glass-dark rounded-xl p-2">
+                <a href="#sustainability" class="block px-4 py-2 rounded-lg hover:bg-white/10 text-sm">ESG Commitment</a>
+                <a href="#sustainability" class="block px-4 py-2 rounded-lg hover:bg-white/10 text-sm">RSPO Certification</a>
+                <a href="#sustainability" class="block px-4 py-2 rounded-lg hover:bg-white/10 text-sm">ISPO Certification</a>
+                <a href="#sustainability" class="block px-4 py-2 rounded-lg hover:bg-white/10 text-sm">Environmental Policy</a>
+              </div>
+            </div>
+            
+            <a href="#export-markets" class="nav-link relative hover-gold text-sm font-medium">Export Markets</a>
+            <a href="#quality" class="nav-link relative hover-gold text-sm font-medium">Quality</a>
+            <a href="#contact" class="nav-link relative hover-gold text-sm font-medium">Contact</a>
+          </div>
+          
+          <!-- CTA Button -->
+          <div class="hidden lg:block">
+            <a href="#quote" class="gold-gradient text-navy px-6 py-3 rounded-lg font-semibold text-sm hover:shadow-lg hover:shadow-yellow-500/50 transition-all">
+              Request Quote
+            </a>
+          </div>
+          
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" class="lg:hidden">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden glass-dark border-t border-white/10">
+      <div class="px-4 py-4 space-y-3">
+        <a href="#home" class="block py-2 hover-gold">Home</a>
+        <a href="#about" class="block py-2 hover-gold">About Us</a>
+        <a href="#products" class="block py-2 hover-gold">Products</a>
+        <a href="#sustainability" class="block py-2 hover-gold">Sustainability</a>
+        <a href="#export-markets" class="block py-2 hover-gold">Export Markets</a>
+        <a href="#quality" class="block py-2 hover-gold">Quality</a>
+        <a href="#contact" class="block py-2 hover-gold">Contact</a>
+        <a href="#quote" class="block gold-gradient text-navy px-6 py-3 rounded-lg font-semibold text-center mt-4">
+          Request Quote
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Video Background -->
+  <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Video Background -->
+      <div class="absolute inset-0 z-0">
+      <video autoplay muted loop playsinline preload="metadata" class="w-full h-full object-cover">
+        <source src="./hero website.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="absolute inset-0 hero-gradient"></div>
+    </div>
+    
+    <!-- Hero Content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
+      <div class="glass-dark rounded-3xl p-8 md:p-16 border border-gold/30">
+        <div class="inline-block mb-6 px-6 py-2 glass rounded-full border border-gold/50">
+          <p class="text-gold text-sm font-semibold">Sustainable Palm Oil for Global Markets</p>
+        </div>
+        
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight" id="hero-title">
+          Delivering Sustainable<br><span class="text-gold">Palm Oil to the World</span>
+        </h1>
+        
+        <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto" id="hero-subtitle">
+          Trusted International Palm Oil Export Partner with Certified Quality and Reliable Global Logistics
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <a href="#products" class="gold-gradient text-navy px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:shadow-yellow-500/50 transition-all transform hover:scale-105">
+            Explore Products
+          </a>
+          <a href="#quote" class="glass border-2 border-gold text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all transform hover:scale-105">
+            Request Quote
+          </a>
+        </div>
+        
+        <!-- Animated Counters -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="glass rounded-2xl p-6 border border-white/10">
+            <div class="text-4xl md:text-5xl font-bold text-gold mb-2" data-count="20">0</div>
+            <div class="text-sm text-gray-300">Years Experience</div>
+          </div>
+          <div class="glass rounded-2xl p-6 border border-white/10">
+            <div class="text-4xl md:text-5xl font-bold text-gold mb-2" data-count="50">0</div>
+            <div class="text-sm text-gray-300">Export Countries</div>
+          </div>
+          <div class="glass rounded-2xl p-6 border border-white/10">
+            <div class="text-4xl md:text-5xl font-bold text-gold mb-2" data-count="500">0</div>
+            <div class="text-sm text-gray-300">K+ MT Annual Capacity</div>
+          </div>
+          <div class="glass rounded-2xl p-6 border border-white/10">
+            <div class="text-4xl md:text-5xl font-bold text-gold mb-2" data-count="100">0</div>
+            <div class="text-sm text-gray-300">% Int'l Standards</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+      <div class="float-animation">
+        <i data-lucide="chevron-down" class="w-8 h-8 text-gold"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Statistics Dashboard -->
+  <section class="py-20 relative overflow-hidden">
+    <div class="absolute inset-0 bg-emerald/20"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Live Operations <span class="text-gold">Dashboard</span></h2>
+        <p class="text-gray-300">Real-time insights into our global operations</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="glass-emerald rounded-2xl p-6 border border-gold/30 hover:scale-105 transition-transform">
+          <div class="flex items-center justify-between mb-4">
+            <i data-lucide="factory" class="w-8 h-8 text-gold"></i>
+            <span class="text-xs glass px-3 py-1 rounded-full">LIVE</span>
+          </div>
+          <div class="text-3xl font-bold mb-2" id="production-stat">1,247</div>
+          <div class="text-sm text-gray-300">Today's Production (MT)</div>
+          <div class="mt-4 h-2 bg-white/10 rounded-full overflow-hidden">
+            <div class="h-full gold-gradient rounded-full" style="width: 75%"></div>
+          </div>
+        </div>
+        
+        <div class="glass-emerald rounded-2xl p-6 border border-gold/30 hover:scale-105 transition-transform">
+          <div class="flex items-center justify-between mb-4">
+            <i data-lucide="ship" class="w-8 h-8 text-gold"></i>
+            <span class="text-xs glass px-3 py-1 rounded-full">LIVE</span>
+          </div>
+          <div class="text-3xl font-bold mb-2" id="shipment-stat">856</div>
+          <div class="text-sm text-gray-300">Today's Shipment (MT)</div>
+          <div class="mt-4 h-2 bg-white/10 rounded-full overflow-hidden">
+            <div class="h-full gold-gradient rounded-full" style="width: 62%"></div>
+          </div>
+        </div>
+        
+        <div class="glass-emerald rounded-2xl p-6 border border-gold/30 hover:scale-105 transition-transform">
+          <div class="flex items-center justify-between mb-4">
+            <i data-lucide="globe" class="w-8 h-8 text-gold"></i>
+            <span class="text-xs glass px-3 py-1 rounded-full">LIVE</span>
+          </div>
+          <div class="text-3xl font-bold mb-2">52</div>
+          <div class="text-sm text-gray-300">Countries Served</div>
+          <div class="mt-4 h-2 bg-white/10 rounded-full overflow-hidden">
+            <div class="h-full gold-gradient rounded-full" style="width: 88%"></div>
+          </div>
+        </div>
+        
+        <div class="glass-emerald rounded-2xl p-6 border border-gold/30 hover:scale-105 transition-transform">
+          <div class="flex items-center justify-between mb-4">
+            <i data-lucide="package" class="w-8 h-8 text-gold"></i>
+            <span class="text-xs glass px-3 py-1 rounded-full">LIVE</span>
+          </div>
+          <div class="text-3xl font-bold mb-2" id="container-stat">127</div>
+          <div class="text-sm text-gray-300">Active Containers</div>
+          <div class="mt-4 h-2 bg-white/10 rounded-full overflow-hidden">
+            <div class="h-full gold-gradient rounded-full" style="width: 70%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Palm Oil Supply Chain Visualization -->
+  <section id="about" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold mb-4">Integrated <span class="text-gold">Supply Chain</span></h2>
+        <p class="text-gray-300 text-lg">From plantation to global delivery - we control every step</p>
+      </div>
+      
+      <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+        <div class="chain-pill rounded-3xl p-6 text-center glass border border-gold/20 hover:scale-105 transition-transform">
+          <div class="chain-pill-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6" />
+              <path d="M12 7 L14.5 12 L12 14.5 L9.5 12 Z" fill="currentColor" opacity="0.95" />
+            </svg>
+          </div>
+          <h3 class="text-white text-lg font-semibold mb-1">Full Traceability</h3>
+          <p class="text-gray-300 text-sm">Every shipment is tracked from the mill to the final port.</p>
+        </div>
+
+        <div class="chain-pill rounded-3xl p-6 text-center glass border border-gold/20 hover:scale-105 transition-transform">
+          <div class="chain-pill-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M6 14c2-3 5-5 8-5 1.5 0 3 1 4 2.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+              <path d="M12 4c0 3-4 3-6 6 2 0 4 2 6 2s4-2 4-4c0-2-2-4-4-4z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+            </svg>
+          </div>
+          <h3 class="text-white text-lg font-semibold mb-1">Certified Sustainability</h3>
+          <p class="text-gray-300 text-sm">RSPO &amp; ISPO compliance across plantation, processing, and export.</p>
+        </div>
+
+        <div class="chain-pill rounded-3xl p-6 text-center glass border border-gold/20 hover:scale-105 transition-transform">
+          <div class="chain-pill-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M3 17c3-1 6-1 9-1s6 0 9 1v2H3v-2z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+              <path d="M5 10h14l-1 4H6l-1-4z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+              <circle cx="7" cy="18" r="1" fill="currentColor" />
+              <circle cx="17" cy="18" r="1" fill="currentColor" />
+            </svg>
+          </div>
+          <h3 class="text-white text-lg font-semibold mb-1">Global Delivery</h3>
+          <p class="text-gray-300 text-sm">Fast export logistics to more than 50 countries worldwide.</p>
+        </div>
+      </div>
+
+      <div id="supply-chain-carousel" class="glass-dark rounded-3xl p-8 md:p-12 border border-gold/30">
+        <div class="overflow-hidden rounded-3xl border border-white/10 bg-slate-950/40 mb-6 relative">
+          <div class="flex gap-3 overflow-x-auto px-4 py-8 supply-flow-scroll snap-x">
+            <button type="button" class="supply-step-button active snap-center" data-step="1">
+              <span class="icon"><i data-lucide="tree-deciduous"></i></span>
+              <span class="label"><strong>Plantation</strong><span>Start with certified fields</span></span>
+            </button>
+            <button type="button" class="supply-step-button snap-center" data-step="2">
+              <span class="icon"><i data-lucide="scissors"></i></span>
+              <span class="label"><strong>Harvesting</strong><span>Fresh fruit, ripeness control</span></span>
+            </button>
+            <button type="button" class="supply-step-button snap-center" data-step="3">
+              <span class="icon"><i data-lucide="settings"></i></span>
+              <span class="label"><strong>Processing</strong><span>Fast extraction with energy efficiency</span></span>
+            </button>
+            <button type="button" class="supply-step-button snap-center" data-step="4">
+              <span class="icon"><i data-lucide="shield-check"></i></span>
+              <span class="label"><strong>Quality</strong><span>Lab testing for every batch</span></span>
+            </button>
+            <button type="button" class="supply-step-button snap-center" data-step="5">
+              <span class="icon"><i data-lucide="archive"></i></span>
+              <span class="label"><strong>Terminal</strong><span>Large storage & port readiness</span></span>
+            </button>
+            <button type="button" class="supply-step-button snap-center" data-step="6">
+              <span class="icon"><i data-lucide="truck"></i></span>
+              <span class="label"><strong>Export</strong><span>Global trade lanes</span></span>
+            </button>
+            <button type="button" class="supply-step-button snap-center" data-step="7">
+              <span class="icon"><i data-lucide="globe"></i></span>
+              <span class="label"><strong>Delivery</strong><span>Customs & door-to-door</span></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-[420px_auto] gap-6 items-start">
+          <div id="detail-media" class="relative overflow-hidden rounded-3xl border border-white/10 bg-slate-950/80">
+            <img id="detail-image" src="./cpo-product.jpg" alt="Plantation photo" class="w-full h-full object-cover media-visible">
+            <video id="detail-video" class="w-full h-full object-cover media-hidden" autoplay muted loop playsinline tabindex="-1" aria-hidden="true" controls="false"></video>
+            <div class="fade-overlay media-hidden" aria-hidden="true"></div>
+          </div>
+          <div class="space-y-6">
+            <div class="glass rounded-3xl p-6 border border-gold/20 supply-info-card">
+              <h3 id="detail-title" class="text-3xl font-bold text-gold mb-4">Sustainable Plantation</h3>
+              <p id="detail-desc" class="text-gray-300 leading-relaxed">Our RSPO & ISPO certified plantations span 50,000 hectares across Indonesia, managed with sustainable practices and environmental stewardship.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="supply-detail-metric">
+                <p id="metric1-title">Area</p>
+                <p id="metric1-value">50,000 ha</p>
+              </div>
+              <div class="supply-detail-metric">
+                <p id="metric2-title">Yield</p>
+                <p id="metric2-value">24,000 MT/year</p>
+              </div>
+              <div class="supply-detail-metric">
+                <p id="metric3-title">Compliance</p>
+                <p id="metric3-value">RSPO & ISPO</p>
+              </div>
+              <div class="supply-detail-metric">
+                <p id="metric4-title">Delivery</p>
+                <p id="metric4-value">50+ Negara</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <div class="inline-block mb-4 px-6 py-2 glass rounded-full border border-gold/50">
+          <p class="text-gold text-sm font-semibold">Premium Product Portfolio</p>
+        </div>
+        <h2 class="text-3xl md:text-5xl font-bold mb-4">World-Class <span class="text-gold">Palm Products</span></h2>
+        <p class="text-gray-300 text-lg">Certified quality for global industrial and food applications</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <!-- Product Card 1 -->
+        <div class="glass rounded-2xl overflow-hidden border border-white/10 hover:border-gold/50 transition-all group hover:scale-105">
+          <div class="h-48 bg-gradient-to-br from-emerald to-emerald/50 relative overflow-hidden">
+            <img src="./cpo-product.jpg" alt="CPO" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute top-4 right-4 glass px-3 py-1 rounded-full text-xs font-semibold">RSPO</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Crude Palm Oil (CPO)</h3>
+            <p class="text-gold text-sm font-semibold mb-3">Premium Grade Export Standard</p>
+            <p class="text-gray-300 text-sm mb-4">High-quality CPO with FFA &lt; 5%, DOBI &gt; 2.5, RSPO Certified sustainable source.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs text-gray-400">ISO 9001</span>
+              <button class="text-gold hover:underline text-sm font-semibold">Learn More →</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product Card 2 -->
+        <div class="glass rounded-2xl overflow-hidden border border-white/10 hover:border-gold/50 transition-all group hover:scale-105">
+          <div class="h-48 bg-gradient-to-br from-emerald to-emerald/50 relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=500&h=300&fit=crop" alt="PKO" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute top-4 right-4 glass px-3 py-1 rounded-full text-xs font-semibold">ISPO</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Palm Kernel Oil</h3>
+            <p class="text-gold text-sm font-semibold mb-3">Industrial/Food Grade</p>
+            <p class="text-gray-300 text-sm mb-4">Premium PKO for cosmetics, oleochemicals, and food processing. Consistent quality.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs text-gray-400">HACCP</span>
+              <button class="text-gold hover:underline text-sm font-semibold">Learn More →</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product Card 3 -->
+        <div class="glass rounded-2xl overflow-hidden border border-white/10 hover:border-gold/50 transition-all group hover:scale-105">
+          <div class="h-48 bg-gradient-to-br from-emerald to-emerald/50 relative overflow-hidden">
+            <img src="./palm-olein.jpg" alt="Olein" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute top-4 right-4 glass px-3 py-1 rounded-full text-xs font-semibold">ISPO</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Palm Olein</h3>
+            <p class="text-gold text-sm font-semibold mb-3">Cooking Oil Industry</p>
+            <p class="text-gray-300 text-sm mb-4">International quality RBD Palm Olein CP8/CP10 for cooking oil and food manufacturing.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs text-gray-400">GMP</span>
+              <button class="text-gold hover:underline text-sm font-semibold">Learn More →</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product Card 4 -->
+        <div class="glass rounded-2xl overflow-hidden border border-white/10 hover:border-gold/50 transition-all group hover:scale-105">
+          <div class="h-48 bg-gradient-to-br from-emerald to-emerald/50 relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=500&h=300&fit=crop" alt="Stearin" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute top-4 right-4 glass px-3 py-1 rounded-full text-xs font-semibold">ISPO</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Palm Stearin</h3>
+            <p class="text-gold text-sm font-semibold mb-3">Food Processing Industry</p>
+            <p class="text-gray-300 text-sm mb-4">High-quality RBD Palm Stearin for margarine, shortening, and confectionery applications.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs text-gray-400">ISO 22000</span>
+              <button class="text-gold hover:underline text-sm font-semibold">Learn More →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Product Comparison Tool -->
+      <div class="glass-dark rounded-3xl p-8 border border-gold/30">
+        <h3 class="text-2xl font-bold mb-6 text-center">Product <span class="text-gold">Comparison Tool</span></h3>
+        <div class="overflow-x-auto">
+          <table class="w-full">
+            <thead>
+              <tr class="border-b border-white/10">
+                <th class="text-left py-4 px-4">Product</th>
+                <th class="text-center py-4 px-4">Food Grade</th>
+                <th class="text-center py-4 px-4">Biodiesel</th>
+                <th class="text-center py-4 px-4">Industrial</th>
+                <th class="text-center py-4 px-4">Cosmetics</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-white/5 hover:bg-white/5">
+                <td class="py-4 px-4 font-semibold">CPO</td>
+                <td class="text-center py-4 px-4"><i data-lucide="check" class="w-5 h-5 text-green-400 mx-auto"></i></td>
+                <td class="text-center py-4 px-4"><i data-lucide="check" class="w-5 h-5 text-green-400 mx-auto"></i></td>
+                <td class="text-center py-4 px-4"><i data-lucide="check" class="w-5 h-5 text-green-400 mx-auto"></i></td>
+                <td class="text-center py-4 px-4"><i data-lucide="x" class="w-5 h-5 text-red-400 mx-auto"></i></td>
+              </tr>
+              <tr class="border-b border-white/5 hover:bg-white/5">
+                <td class="py-4 px-4 font-semibold">PKO</td>
+                <td class="text-center py-4 px-4"><i data-lucide="check" class="w-5 h-5 text-green-400 mx-auto"></i></td>
+                <td class="text-center py-4 px-4"><i data-lucide="x" class="w-5 h-5 text-red-400 mx-auto"></i></td>
+                <td class="text-center py-4 px-4"><i data-lucide="check" class="w-5 h-5 text-green-400 mx-auto"></i></td>
+                <td class="text-center py-4 px-4"><i data-lucide="check" class="w-5 h-5 text-green-400 mx-auto"></i></td>
+              </tr>
+              <tr class="hover:bg-white/5">
+                <td class="py-4 px-4 font-semibold">Palm Olein</td>
+                <td class="text-center py-4 px-4"><i data-lucide="check" class="w-5 h-5 text-green-400 mx-auto"></i></td>
+                <td class="text-center py-4 px-4"><i data-lucide="x" class="w-5 h-5 text-red-400 mx-auto"></i></td>
+                <td class="text-center py-4 px-4"><i data-lucide="x" class="w-5 h-5 text-red-400 mx-auto"></i></td>
+                <td class="text-center py-4 px-4"><i data-lucide="x" class="w-5 h-5 text-red-400 mx-auto"></i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Export Map Section -->
+  <section id="export-markets" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold mb-4">Global <span class="text-gold">Export Markets</span></h2>
+        <p class="text-gray-300 text-lg">Serving 50+ countries across 5 continents</p>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- 3D Globe -->
+        <div class="lg:col-span-2 glass-dark rounded-3xl p-8 border border-gold/30">
+          <div id="globe-container" class="w-full h-[500px] rounded-2xl overflow-hidden"></div>
+        </div>
+        
+        <!-- Interactive Map & Info -->
+        <div class="glass-dark rounded-3xl p-8 border border-gold/30">
+          <h3 class="text-2xl font-bold mb-6 text-gold">Key Markets</h3>
+          
+          <!-- Leaflet Map -->
+          <div id="export-map" class="w-full h-64 rounded-xl mb-6 overflow-hidden"></div>
+          
+          <!-- Market Details -->
+          <div id="market-info" class="glass rounded-xl p-6 border border-gold/30">
+            <div class="flex items-center mb-4">
+              <i data-lucide="map-pin" class="w-6 h-6 text-gold mr-3"></i>
+              <h4 class="text-xl font-bold" id="market-country">Germany</h4>
+            </div>
+            <div class="space-y-3">
+              <div class="flex justify-between">
+                <span class="text-gray-300">Annual Export:</span>
+                <span class="font-bold text-gold" id="market-export">25,000 MT</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-300">Products:</span>
+                <span class="font-semibold" id="market-products">CPO, Palm Olein, PKO</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-300">Since:</span>
+                <span class="font-semibold">2008</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Region Buttons -->
+          <div class="mt-6 space-y-2">
+            <button class="market-btn w-full glass px-4 py-3 rounded-xl text-left hover:bg-white/10 transition-all" data-region="asia">
+              <i data-lucide="globe-2" class="w-4 h-4 inline mr-2 text-gold"></i>Asia Pacific
+            </button>
+            <button class="market-btn w-full glass px-4 py-3 rounded-xl text-left hover:bg-white/10 transition-all" data-region="europe">
+              <i data-lucide="globe-2" class="w-4 h-4 inline mr-2 text-gold"></i>Europe
+            </button>
+            <button class="market-btn w-full glass px-4 py-3 rounded-xl text-left hover:bg-white/10 transition-all" data-region="middle-east">
+              <i data-lucide="globe-2" class="w-4 h-4 inline mr-2 text-gold"></i>Middle East
+            </button>
+            <button class="market-btn w-full glass px-4 py-3 rounded-xl text-left hover:bg-white/10 transition-all" data-region="africa">
+              <i data-lucide="globe-2" class="w-4 h-4 inline mr-2 text-gold"></i>Africa
+            </button>
+            <button class="market-btn w-full glass px-4 py-3 rounded-xl text-left hover:bg-white/10 transition-all" data-region="americas">
+              <i data-lucide="globe-2" class="w-4 h-4 inline mr-2 text-gold"></i>Americas
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Export Calculator -->
+  <section id="quote" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold mb-4">Export <span class="text-gold">Calculator</span></h2>
+        <p class="text-gray-300 text-lg">Get instant shipping estimates for your order</p>
+      </div>
+      
+      <div class="glass-dark rounded-3xl p-8 md:p-12 border border-gold/30">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Calculator Inputs -->
+          <div>
+            <h3 class="text-2xl font-bold mb-6">Calculate Your Shipment</h3>
+            <div class="space-y-6">
+              <div>
+                <label class="block text-sm font-semibold mb-2">Product Type</label>
+                <select id="calc-product" class="w-full glass px-4 py-3 rounded-xl border border-white/10 focus:border-gold outline-none">
+                  <option value="cpo">Crude Palm Oil (CPO)</option>
+                  <option value="pko">Palm Kernel Oil</option>
+                  <option value="olein">Palm Olein</option>
+                  <option value="stearin">Palm Stearin</option>
+                </select>
+              </div>
+              
+              <div>
+                <label class="block text-sm font-semibold mb-2">Quantity (MT)</label>
+                <input type="number" id="calc-quantity" value="100" min="1" class="w-full glass px-4 py-3 rounded-xl border border-white/10 focus:border-gold outline-none">
+              </div>
+              
+              <div>
+                <label class="block text-sm font-semibold mb-2">Destination Country</label>
+                <select id="calc-destination" class="w-full glass px-4 py-3 rounded-xl border border-white/10 focus:border-gold outline-none">
+                  <option value="germany">Germany</option>
+                  <option value="netherlands">Netherlands</option>
+                  <option value="china">China</option>
+                  <option value="india">India</option>
+                  <option value="usa">United States</option>
+                  <option value="uae">UAE</option>
+                  <option value="south-africa">South Africa</option>
+                </select>
+              </div>
+              
+              <div>
+                <label class="block text-sm font-semibold mb-2">Container Type</label>
+                <select id="calc-container" class="w-full glass px-4 py-3 rounded-xl border border-white/10 focus:border-gold outline-none">
+                  <option value="20ft">20ft Standard (21 MT)</option>
+                  <option value="40ft">40ft Standard (26 MT)</option>
+                  <option value="flexitank">Flexitank (24 MT)</option>
+                  <option value="isotank">ISO Tank (26 MT)</option>
+                </select>
+              </div>
+              
+              <button id="calculate-btn" class="w-full gold-gradient text-navy py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:shadow-yellow-500/50 transition-all">
+                Calculate Estimate
+              </button>
+            </div>
+          </div>
+          
+          <!-- Calculator Results -->
+          <div>
+            <h3 class="text-2xl font-bold mb-6">Estimation Results</h3>
+            <div class="glass rounded-2xl p-8 border border-gold/30 space-y-6">
+              <div>
+                <div class="text-sm text-gray-400 mb-2">Containers Required</div>
+                <div class="text-4xl font-bold text-gold" id="result-containers">5</div>
+              </div>
+              
+              <div>
+                <div class="text-sm text-gray-400 mb-2">Estimated Freight Cost</div>
+                <div class="text-4xl font-bold text-gold" id="result-freight">$12,500</div>
+              </div>
+              
+              <div>
+                <div class="text-sm text-gray-400 mb-2">Delivery Time</div>
+                <div class="text-4xl font-bold text-gold" id="result-time">18-22 Days</div>
+              </div>
+              
+              <div class="pt-6 border-t border-white/10">
+                <p class="text-sm text-gray-400 mb-4">*Estimates based on current market rates. Final quote may vary.</p>
+                <button class="w-full glass border-2 border-gold py-3 rounded-xl font-bold hover:bg-white/10 transition-all">
+                  Request Detailed Quote
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Market Insights -->
+  <section class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold mb-4">Global Market <span class="text-gold">Insights</span></h2>
+        <p class="text-gray-300 text-lg">Real-time analytics and market intelligence</p>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Export Growth Chart -->
+        <div class="glass-dark rounded-3xl p-8 border border-gold/30">
+          <h3 class="text-xl font-bold mb-6">Export Growth Trend (2020-2026)</h3>
+          <canvas id="growthChart"></canvas>
+        </div>
+        
+        <!-- Market Demand Chart -->
+        <div class="glass-dark rounded-3xl p-8 border border-gold/30">
+          <h3 class="text-xl font-bold mb-6">Palm Oil Demand by Region</h3>
+          <canvas id="demandChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sustainability & Certifications -->
+  <section id="sustainability" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <div class="inline-block mb-4 px-6 py-2 glass rounded-full border border-gold/50">
+          <p class="text-gold text-sm font-semibold">ESG Commitment</p>
+        </div>
+        <h2 class="text-3xl md:text-5xl font-bold mb-4">Sustainability & <span class="text-gold">Certifications</span></h2>
+        <p class="text-gray-300 text-lg">Committed to responsible palm oil production</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
+        <!-- Cert 1 -->
+        <div class="glass rounded-2xl p-8 text-center border border-white/10 hover:border-gold/50 transition-all hover:scale-105">
+          <div class="w-20 h-20 mx-auto mb-4 gold-gradient rounded-2xl flex items-center justify-center">
+            <i data-lucide="shield-check" class="w-10 h-10 text-navy"></i>
+          </div>
+          <h3 class="font-bold mb-2">RSPO</h3>
+          <p class="text-xs text-gray-400">Certified Sustainable Palm Oil</p>
+        </div>
+        
+        <!-- Cert 2 -->
+        <div class="glass rounded-2xl p-8 text-center border border-white/10 hover:border-gold/50 transition-all hover:scale-105">
+          <div class="w-20 h-20 mx-auto mb-4 gold-gradient rounded-2xl flex items-center justify-center">
+            <i data-lucide="award" class="w-10 h-10 text-navy"></i>
+          </div>
+          <h3 class="font-bold mb-2">ISPO</h3>
+          <p class="text-xs text-gray-400">Indonesian Sustainable Palm Oil</p>
+        </div>
+        
+        <!-- Cert 3 -->
+        <div class="glass rounded-2xl p-8 text-center border border-white/10 hover:border-gold/50 transition-all hover:scale-105">
+          <div class="w-20 h-20 mx-auto mb-4 gold-gradient rounded-2xl flex items-center justify-center">
+            <i data-lucide="badge-check" class="w-10 h-10 text-navy"></i>
+          </div>
+          <h3 class="font-bold mb-2">ISO 9001</h3>
+          <p class="text-xs text-gray-400">Quality Management System</p>
+        </div>
+        
+        <!-- Cert 4 -->
+        <div class="glass rounded-2xl p-8 text-center border border-white/10 hover:border-gold/50 transition-all hover:scale-105">
+          <div class="w-20 h-20 mx-auto mb-4 gold-gradient rounded-2xl flex items-center justify-center">
+            <i data-lucide="star" class="w-10 h-10 text-navy"></i>
+          </div>
+          <h3 class="font-bold mb-2">HACCP</h3>
+          <p class="text-xs text-gray-400">Food Safety Management</p>
+        </div>
+        
+        <!-- Cert 5 -->
+        <div class="glass rounded-2xl p-8 text-center border border-white/10 hover:border-gold/50 transition-all hover:scale-105">
+          <div class="w-20 h-20 mx-auto mb-4 gold-gradient rounded-2xl flex items-center justify-center">
+            <i data-lucide="check-circle" class="w-10 h-10 text-navy"></i>
+          </div>
+          <h3 class="font-bold mb-2">GMP</h3>
+          <p class="text-xs text-gray-400">Good Manufacturing Practice</p>
+        </div>
+      </div>
+      
+      <!-- Certificate Verification -->
+      <div class="glass-dark rounded-3xl p-8 md:p-12 border border-gold/30">
+        <div class="max-w-2xl mx-auto text-center">
+          <h3 class="text-2xl font-bold mb-6">Certificate <span class="text-gold">Verification</span></h3>
+          <p class="text-gray-300 mb-6">Verify the authenticity of our certifications instantly</p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <input type="text" id="cert-input" placeholder="Enter Certificate Number" class="flex-1 glass px-6 py-4 rounded-xl border border-white/10 focus:border-gold outline-none">
+            <button id="verify-cert-btn" class="gold-gradient text-navy px-8 py-4 rounded-xl font-bold hover:shadow-2xl hover:shadow-yellow-500/50 transition-all whitespace-nowrap">
+              Verify Now
+            </button>
+          </div>
+          <div id="cert-result" class="mt-6 hidden">
+            <div class="glass rounded-xl p-6 border border-green-500/50 bg-green-500/10">
+              <i data-lucide="check-circle" class="w-12 h-12 text-green-400 mx-auto mb-3"></i>
+              <p class="text-green-400 font-bold">Certificate Status: ACTIVE</p>
+              <p class="text-sm text-gray-300 mt-2">RSPO Certificate #ID-2024-GPE-001234 - Valid until Dec 2026</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quality Assurance -->
+  <section id="quality" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold mb-4">Quality <span class="text-gold">Assurance</span></h2>
+        <p class="text-gray-300 text-lg">International standards at every stage</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="glass-dark rounded-2xl p-8 border border-gold/30 hover:scale-105 transition-transform">
+          <i data-lucide="flask-conical" class="w-12 h-12 text-gold mb-4"></i>
+          <h3 class="text-xl font-bold mb-3">Laboratory Testing</h3>
+          <p class="text-gray-300 text-sm">State-of-the-art in-house laboratory with GC-MS and UV-Vis analysis for comprehensive quality testing.</p>
+        </div>
+        
+        <div class="glass-dark rounded-2xl p-8 border border-gold/30 hover:scale-105 transition-transform">
+          <i data-lucide="clipboard-check" class="w-12 h-12 text-gold mb-4"></i>
+          <h3 class="text-xl font-bold mb-3">Quality Control</h3>
+          <p class="text-gray-300 text-sm">Multi-stage QC process from raw material intake to final shipment with 100% inspection coverage.</p>
+        </div>
+        
+        <div class="glass-dark rounded-2xl p-8 border border-gold/30 hover:scale-105 transition-transform">
+          <i data-lucide="globe" class="w-12 h-12 text-gold mb-4"></i>
+          <h3 class="text-xl font-bold mb-3">Int'l Standards</h3>
+          <p class="text-gray-300 text-sm">Compliance with EU, US FDA, CODEX, and ASEAN standards for global market acceptance.</p>
+        </div>
+        
+        <div class="glass-dark rounded-2xl p-8 border border-gold/30 hover:scale-105 transition-transform">
+          <i data-lucide="file-check" class="w-12 h-12 text-gold mb-4"></i>
+          <h3 class="text-xl font-bold mb-3">Certificates</h3>
+          <p class="text-gray-300 text-sm">Complete documentation including COO, Phytosanitary, Halal, Kosher, and MSDS for every shipment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold mb-4">Get in <span class="text-gold">Touch</span></h2>
+        <p class="text-gray-300 text-lg">Let's discuss your palm oil requirements</p>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Contact Form -->
+        <div class="lg:col-span-2 glass-dark rounded-3xl p-8 border border-gold/30">
+          <h3 class="text-2xl font-bold mb-6">Send us a Message</h3>
+          <form id="contact-form" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-semibold mb-2">Full Name</label>
+                <input type="text" required class="w-full glass px-4 py-3 rounded-xl border border-white/10 focus:border-gold outline-none">
+              </div>
+              <div>
+                <label class="block text-sm font-semibold mb-2">Company</label>
+                <input type="text" required class="w-full glass px-4 py-3 rounded-xl border border-white/10 focus:border-gold outline-none">
+              </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-semibold mb-2">Email</label>
+                <input type="email" required class="w-full glass px-4 py-3 rounded-xl border border-white/10 focus:border-gold outline-none">
+              </div>
+              <div>
+                <label class="block text-sm font-semibold mb-2">Phone / WhatsApp</label>
+                <input type="tel" required class="w-full glass px-4 py-3 rounded-xl border border-white/10 focus:border-gold outline-none">
+              </div>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2">Product Interest</label>
+              <select class="w-full glass px-4 py-3 rounded-xl border border-white/10 focus:border-gold outline-none">
+                <option>Crude Palm Oil (CPO)</option>
+                <option>Palm Kernel Oil</option>
+                <option>Palm Olein</option>
+                <option>Palm Stearin</option>
+                <option>Biodiesel Feedstock</option>
+                <option>Multiple Products</option>
+              </select>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2">Message</label>
+              <textarea rows="4" required class="w-full glass px-4 py-3 rounded-xl border border-white/10 focus:border-gold outline-none"></textarea>
+            </div>
+            
+            <button type="submit" class="w-full gold-gradient text-navy py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:shadow-yellow-500/50 transition-all">
+              Send Message
+            </button>
+          </form>
+        </div>
+        
+        <!-- Contact Info -->
+        <div class="space-y-6">
+          <div class="glass-dark rounded-2xl p-6 border border-gold/30">
+            <i data-lucide="map-pin" class="w-8 h-8 text-gold mb-4"></i>
+            <h4 class="font-bold mb-2">Head Office</h4>
+            <p class="text-gray-300 text-sm">Jl. Sudirman No. 123, Jakarta 12190, Indonesia</p>
+          </div>
+          
+          <div class="glass-dark rounded-2xl p-6 border border-gold/30">
+            <i data-lucide="mail" class="w-8 h-8 text-gold mb-4"></i>
+            <h4 class="font-bold mb-2">Email</h4>
+            <p class="text-gray-300 text-sm">export@globalpalm.id</p>
+            <p class="text-gray-300 text-sm">sales@globalpalm.id</p>
+          </div>
+          
+          <div class="glass-dark rounded-2xl p-6 border border-gold/30">
+            <i data-lucide="phone" class="w-8 h-8 text-gold mb-4"></i>
+            <h4 class="font-bold mb-2">Phone & WhatsApp</h4>
+            <p class="text-gray-300 text-sm">+62 21 1234 5678</p>
+            <p class="text-gray-300 text-sm">+62 812 3456 7890</p>
+          </div>
+          
+          <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="block gold-gradient text-navy p-6 rounded-2xl text-center hover:shadow-2xl hover:shadow-yellow-500/50 transition-all">
+            <i data-lucide="message-circle" class="w-8 h-8 mx-auto mb-2"></i>
+            <p class="font-bold">Chat on WhatsApp</p>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Google Maps -->
+      <div class="mt-8 glass-dark rounded-3xl p-2 border border-gold/30">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.81666631530277!3d-6.194168995501337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f43e7aaaaaab%3A0x6b6c5b5b5b5b5b5b!2sJakarta%2C%20Indonesia!5e0!3m2!1sen!2sus!4v1234567890"
+          width="100%" 
+          height="400" 
+          style="border:0; border-radius: 1rem;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="glass-dark border-t border-gold/30 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <!-- Column 1 -->
+        <div>
+          <div class="flex items-center space-x-3 mb-6">
+            <div class="w-12 h-12 rounded-lg gold-gradient flex items-center justify-center">
+              <i data-lucide="leaf" class="w-7 h-7 text-navy"></i>
+            </div>
+            <div>
+              <div class="font-bold">PT Global Palm</div>
+              <div class="text-xs text-gold">Export Indonesia</div>
+            </div>
+          </div>
+          <p class="text-gray-300 text-sm mb-4">Your trusted partner for sustainable palm oil exports worldwide.</p>
+          <div class="flex space-x-3">
+            <a href="javascript:void(0)" title="LinkedIn placeholder" class="glass w-10 h-10 rounded-lg flex items-center justify-center hover:bg-gold/20 transition-all">
+              <i data-lucide="linkedin" class="w-5 h-5"></i>
+            </a>
+            <a href="javascript:void(0)" title="Twitter placeholder" class="glass w-10 h-10 rounded-lg flex items-center justify-center hover:bg-gold/20 transition-all">
+              <i data-lucide="twitter" class="w-5 h-5"></i>
+            </a>
+            <a href="javascript:void(0)" title="Facebook placeholder" class="glass w-10 h-10 rounded-lg flex items-center justify-center hover:bg-gold/20 transition-all">
+              <i data-lucide="facebook" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Column 2 -->
+        <div>
+          <h4 class="font-bold text-gold mb-4">Company</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#about" class="text-gray-300 hover-gold">Company Profile</a></li>
+            <li><a href="#about" class="text-gray-300 hover-gold">Vision & Mission</a></li>
+            <li><a href="#leadership" class="text-gray-300 hover-gold">Leadership Team</a></li>
+            <li><a href="#sustainability" class="text-gray-300 hover-gold">Sustainability</a></li>
+            <li><a href="#global" class="text-gray-300 hover-gold">Global Presence</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 3 -->
+        <div>
+          <h4 class="font-bold text-gold mb-4">Products & Markets</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#products" class="text-gray-300 hover-gold">CPO</a></li>
+            <li><a href="#products" class="text-gray-300 hover-gold">Palm Kernel Oil</a></li>
+            <li><a href="#products" class="text-gray-300 hover-gold">Palm Olein</a></li>
+            <li><a href="#export-markets" class="text-gray-300 hover-gold">Export Markets</a></li>
+            <li><a href="#quality" class="text-gray-300 hover-gold">Quality Assurance</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 4 -->
+        <div>
+          <h4 class="font-bold text-gold mb-4">Resources</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="javascript:void(0)" title="News placeholder" class="text-gray-300 hover-gold">News & Articles</a></li>
+            <li><a href="javascript:void(0)" title="Gallery placeholder" class="text-gray-300 hover-gold">Gallery</a></li>
+            <li><a href="javascript:void(0)" title="Investor relations placeholder" class="text-gray-300 hover-gold">Investor Relations</a></li>
+            <li><a href="javascript:void(0)" title="Careers placeholder" class="text-gray-300 hover-gold">Careers</a></li>
+            <li><a href="#contact" class="text-gray-300 hover-gold">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-white/10 pt-8 text-center">
+        <p class="text-gray-400 text-sm mb-2">© 2026 PT Global Palm Export Indonesia. All rights reserved.</p>
+        <p class="text-gold text-sm font-semibold">Connecting Indonesia's Palm Oil to Global Markets</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AI Chat Assistant Bubble -->
+  <div id="chat-widget" class="fixed bottom-6 right-6 z-50">
+    <button id="chat-toggle" class="gold-gradient w-16 h-16 rounded-full shadow-2xl shadow-yellow-500/50 flex items-center justify-center hover:scale-110 transition-transform">
+      <i data-lucide="message-circle" class="w-8 h-8 text-navy"></i>
+    </button>
+    
+    <!-- Chat Window -->
+    <div id="chat-window" class="hidden absolute bottom-20 right-0 w-96 max-w-[calc(100vw-3rem)] glass-dark rounded-2xl border border-gold/30 shadow-2xl">
+      <!-- Chat Header -->
+      <div class="gold-gradient p-4 rounded-t-2xl flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-full bg-navy flex items-center justify-center">
+            <i data-lucide="bot" class="w-6 h-6 text-gold"></i>
+          </div>
+          <div>
+            <div class="font-bold text-navy">AI Assistant</div>
+            <div class="text-xs text-navy/70">Online</div>
+          </div>
+        </div>
+        <button id="chat-close" class="text-navy hover:opacity-70">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      
+      <!-- Chat Messages -->
+      <div id="chat-messages" class="h-96 overflow-y-auto p-4 space-y-4 custom-scrollbar">
+        <div class="chat-bubble">
+          <div class="glass rounded-2xl rounded-tl-none p-4 max-w-[80%]">
+            <p class="text-sm">Hello! I'm your AI assistant. How can I help you with our palm oil products today?</p>
+          </div>
+        </div>
+        
+        <!-- Quick Options -->
+        <div class="space-y-2">
+          <button class="chat-option w-full glass px-4 py-2 rounded-xl text-sm text-left hover:bg-white/10 transition-all" data-option="products">
+            📦 Product Information
+          </button>
+          <button class="chat-option w-full glass px-4 py-2 rounded-xl text-sm text-left hover:bg-white/10 transition-all" data-option="export">
+            🌍 Export Inquiry
+          </button>
+          <button class="chat-option w-full glass px-4 py-2 rounded-xl text-sm text-left hover:bg-white/10 transition-all" data-option="shipping">
+            🚢 Shipping Details
+          </button>
+          <button class="chat-option w-full glass px-4 py-2 rounded-xl text-sm text-left hover:bg-white/10 transition-all" data-option="certifications">
+            🏆 Certifications
+          </button>
+        </div>
+      </div>
+      
+      <!-- Chat Input -->
+      <div class="p-4 border-t border-white/10">
+        <div class="flex space-x-2">
+          <input type="text" id="chat-input" placeholder="Type your message..." class="flex-1 glass px-4 py-2 rounded-xl border border-white/10 focus:border-gold outline-none text-sm">
+          <button id="chat-send" class="gold-gradient w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <i data-lucide="send" class="w-5 h-5 text-navy"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    // Initialize Lucide Icons
+    lucide.createIcons();
+    
+    // GSAP ScrollTrigger and smooth scroll plugin
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+    
+    // Navbar Scroll Effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        navbar.classList.add('shadow-2xl');
+      } else {
+        navbar.classList.remove('shadow-2xl');
+      }
+    });
+    
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Animated Counters
+    const counters = document.querySelectorAll('[data-count]');
+    const animateCounter = (el) => {
+      const target = parseInt(el.getAttribute('data-count'));
+      const duration = 2000;
+      const step = target / (duration / 16);
+      let current = 0;
+      
+      const updateCounter = () => {
+        current += step;
+        if (current < target) {
+          el.textContent = Math.floor(current);
+          requestAnimationFrame(updateCounter);
+        } else {
+          el.textContent = target;
+        }
+      };
+      updateCounter();
+    };
+
+    // Preload video assets to reduce playback delay
+    const videoCache = {};
+    function preloadVideos() {
+      Object.values(supplyChainData).forEach(item => {
+            if (item.image && typeof item.image === 'string' && item.image.toLowerCase().endsWith('.mp4')) {
+          try {
+            const v = document.createElement('video');
+            v.preload = 'metadata';
+                try { v.src = encodeURI(item.image); } catch (e) { v.src = item.image; }
+            // attempt to load metadata to warm up decoder
+            v.addEventListener('loadedmetadata', () => {
+              videoCache[item.image] = true;
+            });
+            v.addEventListener('error', () => {
+              videoCache[item.image] = false;
+            });
+            // keep reference to avoid GC until loaded
+            videoCache[item.image] = false;
+            // don't append to DOM; browser should still fetch metadata
+            v.load();
+          } catch (e) {
+            videoCache[item.image] = false;
+          }
+        }
+      });
+    }
+
+    // Start preloading early
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+      setTimeout(preloadVideos, 300);
+    } else {
+      window.addEventListener('DOMContentLoaded', () => setTimeout(preloadVideos, 300));
+    }
+    
+    // Intersection Observer for Counters
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    counters.forEach(counter => counterObserver.observe(counter));
+    
+    // Supply Chain Animation
+    const supplyChainData = {
+      1: {
+        title: 'Sustainable Plantation',
+        desc: 'Our RSPO & ISPO certified plantations span 50,000 hectares across Indonesia, managed with sustainable practices and environmental stewardship.',
+        image: './Plantation.mp4',
+        metrics: {
+          'Area': '50,000 ha',
+          'Yield': '24,000 MT/year',
+          'Compliance': 'RSPO & ISPO',
+          'Delivery': '50+ Negara'
+        }
+      },
+      2: {
+        title: 'Precision Harvesting',
+        desc: 'Expert harvesters select only the ripest fresh fruit bunches daily, ensuring optimal oil quality with full traceability back to each field.',
+        image: './Harvesting.mp4',
+        metrics: {
+          'Freshness': '95% ripe bunches',
+          'Harvest Rate': '5,000 MT/week',
+          'Traceability': '100% batch tracking',
+          'Service': '24/7 field supervision'
+        }
+      },
+      3: {
+        title: 'Modern Processing',
+        desc: 'State-of-the-art mills process fresh fruit within 24 hours using energy-efficient technology, maximizing recovery while minimizing waste.',
+        image: './Modern Processing.mp4',
+        metrics: {
+          'Capacity': '120 MT/h',
+          'Recovery': '92% oil extraction',
+          'Waste': 'Zero-waste system',
+          'Speed': '24-hour turnaround'
+        }
+      },
+      4: {
+        title: 'Quality Inspection',
+        desc: 'Rigorous laboratory testing at every stage ensures products meet international standards including EU, FDA, and CODEX.',
+        image: './Quality .mp4',
+        metrics: {
+          'Testing': '100% batch control',
+          'Standards': 'ISO / HACCP',
+          'Approval': 'EU & FDA ready',
+          'Accuracy': '99.8% lab precision'
+        }
+      },
+      5: {
+        title: 'Export Terminal',
+        desc: 'Strategic deep-water port facilities in Belawan and Dumai with 500,000 MT storage capacity, direct vessel loading and secure handling.',
+        image: './Terminal.mp4',
+        metrics: {
+          'Storage': '500,000 MT',
+          'Berths': '4 deep-water',
+          'Loading': '48h average',
+          'Security': '24/7 monitoring'
+        }
+      },
+      6: {
+        title: 'Global Export',
+        desc: 'Dedicated fleet and logistics partners deliver to 50+ countries with real-time tracking, full documentation, and reliable shipment status.',
+        image: './Export.mp4',
+        metrics: {
+          'Markets': '50+ negara',
+          'Transit': '30 hari rata-rata',
+          'Tracking': 'Live shipment feed',
+          'Customs': 'Dokumentasi lengkap'
+        }
+      },
+      7: {
+        title: 'International Delivery',
+        desc: 'Door-to-door service with customs clearance support, ensuring on-time delivery to your facility worldwide.',
+        image: './Delivery.mp4',
+        metrics: {
+          'On-time': '98%',
+          'Service': 'Door-to-door',
+          'Support': 'Customs clearance',
+          'Coverage': 'Global network'
+        }
+      }
+    };
+
+    const supplyButtons = document.querySelectorAll('.supply-step-button');
+    const detailTitle = document.getElementById('detail-title');
+    const detailDesc = document.getElementById('detail-desc');
+    const detailImage = document.getElementById('detail-image');
+    const detailVideo = document.getElementById('detail-video');
+    const detailMedia = document.getElementById('detail-media');
+    const detailOverlay = detailMedia.querySelector('.fade-overlay');
+    const metric1Title = document.getElementById('metric1-title');
+    const metric1Value = document.getElementById('metric1-value');
+    const metric2Title = document.getElementById('metric2-title');
+    const metric2Value = document.getElementById('metric2-value');
+    const metric3Title = document.getElementById('metric3-title');
+    const metric3Value = document.getElementById('metric3-value');
+    const metric4Title = document.getElementById('metric4-title');
+    const metric4Value = document.getElementById('metric4-value');
+
+    function updateSupplyChain(step) {
+      console.debug('updateSupplyChain ->', step);
+      const data = supplyChainData[step];
+      detailTitle.textContent = data.title;
+      detailDesc.textContent = data.desc;
+      const isVideo = data.image && typeof data.image === 'string' && data.image.toLowerCase().endsWith('.mp4');
+      console.debug('isVideo:', isVideo, 'src:', data.image);
+      if (isVideo) {
+        // preload aggressive for smoother playback
+        try { detailVideo.preload = 'auto'; } catch (e) {}
+        // load video only if different source to avoid reload flicker
+        try {
+          const encoded = encodeURI(data.image);
+          if (!detailVideo.src || detailVideo.src.indexOf(encoded) === -1) {
+            detailVideo.src = encoded;
+            detailVideo.load();
+            detailVideo.currentTime = 0;
+          }
+        } catch (e) {
+          if (!detailVideo.src || detailVideo.src.indexOf(data.image) === -1) {
+            detailVideo.src = data.image;
+            detailVideo.load();
+            detailVideo.currentTime = 0;
+          }
+        }
+        // enforce muted/playsinline for autoplay policies
+        try { detailVideo.muted = true; detailVideo.playsInline = true; detailVideo.setAttribute('playsinline', ''); } catch (e) {}
+        // show overlay for small crossfade blur
+        try {
+          detailOverlay.classList.remove('media-hidden');
+          detailOverlay.classList.add('media-visible');
+        } catch (e) {}
+        // swap media with crossfade
+        setTimeout(() => {
+          detailVideo.classList.add('media-visible');
+          detailVideo.classList.remove('media-hidden');
+          detailImage.classList.remove('media-visible');
+          detailImage.classList.add('media-hidden');
+          try {
+            detailVideo.play().then(() => { console.debug('video playing:', detailVideo.src); try { detailVideo.blur(); } catch(e){} }).catch(err => console.warn('play failed', err));
+          } catch (e) { console.warn('play catch', e); }
+          // attach an error fallback: if video fails, show image instead
+          detailVideo.onerror = () => {
+            detailVideo.pause();
+            detailVideo.classList.remove('media-visible');
+            detailVideo.classList.add('media-hidden');
+            detailImage.classList.add('media-visible');
+            detailImage.classList.remove('media-hidden');
+          };
+          // hide overlay after transition
+          setTimeout(() => {
+            try { detailOverlay.classList.remove('media-visible'); detailOverlay.classList.add('media-hidden'); } catch (e) {}
+          }, 520);
+        }, 120);
+      } else {
+        // image path
+        detailImage.src = data.image;
+        detailImage.alt = `${data.title} photo`;
+        try {
+          detailOverlay.classList.remove('media-hidden');
+          detailOverlay.classList.add('media-visible');
+        } catch (e) {}
+        setTimeout(() => {
+          detailImage.classList.add('media-visible');
+          detailImage.classList.remove('media-hidden');
+          try {
+            detailVideo.pause();
+            detailVideo.classList.remove('media-visible');
+            detailVideo.classList.add('media-hidden');
+            detailVideo.removeAttribute('src');
+            detailVideo.load();
+          } catch (e) {}
+          setTimeout(() => {
+            try { detailOverlay.classList.remove('media-visible'); detailOverlay.classList.add('media-hidden'); } catch (e) {}
+          }, 520);
+        }, 120);
+      }
+
+      const metricKeys = Object.keys(data.metrics);
+      metric1Title.textContent = metricKeys[0];
+      metric1Value.textContent = data.metrics[metricKeys[0]];
+      metric2Title.textContent = metricKeys[1];
+      metric2Value.textContent = data.metrics[metricKeys[1]];
+      metric3Title.textContent = metricKeys[2];
+      metric3Value.textContent = data.metrics[metricKeys[2]];
+      metric4Title.textContent = metricKeys[3];
+      metric4Value.textContent = data.metrics[metricKeys[3]];
+
+      supplyButtons.forEach(button => button.classList.toggle('active', button.getAttribute('data-step') === step));
+    }
+
+    const progressBar = document.getElementById('auto-progress');
+    const supplyCarousel = document.getElementById('supply-chain-carousel');
+    const supplyFlowScroll = document.querySelector('.supply-flow-scroll');
+    let autoStep = 1;
+    const autoRotateDuration = 10000;
+    let progressRAF = null;
+    let progressStartTime = 0;
+    let progressElapsed = 0;
+    const totalSteps = supplyButtons.length;
+
+    // user interaction guard to avoid auto-scroll while user is actively scrolling/gesturing
+    let userInteracting = false;
+    let userInteractTimeout = null;
+    function markUserInteracting() {
+      userInteracting = true;
+      if (userInteractTimeout) clearTimeout(userInteractTimeout);
+      userInteractTimeout = setTimeout(() => { userInteracting = false; }, 900);
+    }
+    ['wheel','touchstart','touchmove','pointerdown'].forEach(ev => window.addEventListener(ev, markUserInteracting, { passive: true }));
+
+    function scrollActiveStepIntoView(step, force = false) {
+      if (!supplyFlowScroll) return;
+      if (userInteracting && !force) return; // do not auto-scroll while user interacts
+      const activeButton = Array.from(supplyButtons).find(button => button.getAttribute('data-step') === `${step}`);
+      if (!activeButton) return;
+      try {
+        activeButton.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      } catch (e) {
+        // fallback: animate parent scrollLeft
+        const parent = supplyFlowScroll;
+        const rect = activeButton.getBoundingClientRect();
+        const parentRect = parent.getBoundingClientRect();
+        const targetScroll = activeButton.offsetLeft - (parent.clientWidth / 2) + (activeButton.clientWidth / 2);
+        gsap.to(parent, { duration: 0.5, scrollTo: { x: targetScroll }, ease: 'power2.out' });
+      }
+    }
+
+    function isElementVisible(el) {
+      if (!el) return false;
+      const r = el.getBoundingClientRect();
+      return (r.top < window.innerHeight && r.bottom > 0);
+    }
+
+    // prevent video from receiving focus which can trigger browser scroll
+    try {
+      detailVideo.setAttribute('tabindex', '-1');
+      detailVideo.setAttribute('aria-hidden', 'true');
+      detailVideo.controls = false;
+    } catch (e) {}
+    document.addEventListener('focusin', (ev) => {
+      try {
+        if (ev.target === detailVideo) {
+          ev.preventDefault();
+          detailVideo.blur();
+        }
+      } catch (e) {}
+    }, true);
+
+    function startProgress(elapsed = 0) {
+      cancelProgress();
+      progressStartTime = performance.now() - elapsed;
+      progressElapsed = elapsed;
+
+      function tick(now) {
+        const elapsedNow = now - progressStartTime;
+        const pct = Math.min(elapsedNow / autoRotateDuration, 1);
+        if (progressBar) progressBar.style.width = `${pct * 100}%`;
+
+        if (pct >= 1) {
+          // advance and immediately restart progress for next step
+          rotateNextStep();
+          // only auto-scroll if the carousel is visible (user may be reading elsewhere)
+          if (isElementVisible(supplyFlowScroll)) scrollActiveStepIntoView(autoStep, false);
+          progressStartTime = performance.now();
+          progressRAF = requestAnimationFrame(tick);
+        } else {
+          progressRAF = requestAnimationFrame(tick);
+        }
+      }
+
+      progressRAF = requestAnimationFrame(tick);
+    }
+
+    function cancelProgress() {
+      if (progressRAF) {
+        cancelAnimationFrame(progressRAF);
+        progressRAF = null;
+      }
+    }
+
+    function pauseProgress() {
+      if (!progressRAF) return;
+      progressElapsed = performance.now() - progressStartTime;
+      cancelProgress();
+    }
+
+    function resumeProgress() {
+      startProgress(progressElapsed || 0);
+    }
+
+    function rotateNextStep() {
+      autoStep = autoStep < totalSteps ? autoStep + 1 : 1;
+      updateSupplyChain(`${autoStep}`);
+    }
+
+    supplyButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const step = button.getAttribute('data-step');
+        autoStep = Number(step);
+        updateSupplyChain(step);
+        cancelProgress();
+        // ensure clicked step is visible even if user was interacting
+        scrollActiveStepIntoView(autoStep, true);
+        // small delay so UI updates before progress restarts
+        setTimeout(() => startProgress(0), 150);
+      });
+    });
+
+    if (supplyCarousel) {
+      supplyCarousel.addEventListener('mouseenter', pauseProgress);
+      supplyCarousel.addEventListener('mouseleave', resumeProgress);
+    }
+
+    updateSupplyChain('1');
+    startProgress(0);
+
+    // Three.js 3D Globe
+    import * as THREE from 'three';
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+    
+    const globeContainer = document.getElementById('globe-container');
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, globeContainer.clientWidth / globeContainer.clientHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(globeContainer.clientWidth, globeContainer.clientHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
+    globeContainer.appendChild(renderer.domElement);
+    
+    // Globe
+    const loader = new THREE.TextureLoader();
+    const globeGeometry = new THREE.SphereGeometry(5, 64, 64);
+    const globeMaterial = new THREE.MeshStandardMaterial({
+      map: loader.load('https://threejs.org/examples/textures/land_ocean_ice_cloud_2048.jpg'),
+      roughness: 1,
+      metalness: 0,
+      emissive: 0x051013,
+      emissiveIntensity: 0.2
+    });
+    const globe = new THREE.Mesh(globeGeometry, globeMaterial);
+    scene.add(globe);
+    
+    // Atmosphere
+    const atmosphereGeometry = new THREE.SphereGeometry(5.05, 64, 64);
+    const atmosphereMaterial = new THREE.MeshPhongMaterial({
+      color: 0x88ccee,
+      transparent: true,
+      opacity: 0.08,
+      side: THREE.FrontSide
+    });
+    const atmosphere = new THREE.Mesh(atmosphereGeometry, atmosphereMaterial);
+    scene.add(atmosphere);
+    
+    // Lights
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    scene.add(ambientLight);
+    const directionalLight = new THREE.DirectionalLight(0xD4A017, 1);
+    directionalLight.position.set(5, 3, 5);
+    scene.add(directionalLight);
+    
+    // Add market points
+    const marketPoints = [
+      { lat: 51.1657, lng: 10.4515, name: 'Germany' },
+      { lat: 52.1326, lng: 5.2913, name: 'Netherlands' },
+      { lat: 35.8617, lng: 104.1954, name: 'China' },
+      { lat: 20.5937, lng: 78.9629, name: 'India' },
+      { lat: 37.0902, lng: -95.7129, name: 'USA' },
+      { lat: 23.4241, lng: 53.8478, name: 'UAE' },
+      { lat: -30.5595, lng: 22.9375, name: 'South Africa' }
+    ];
+    
+    marketPoints.forEach(point => {
+      const phi = (90 - point.lat) * (Math.PI / 180);
+      const theta = (point.lng + 180) * (Math.PI / 180);
+      const x = -5 * Math.sin(phi) * Math.cos(theta);
+      const y = 5 * Math.cos(phi);
+      const z = 5 * Math.sin(phi) * Math.sin(theta);
+      
+      const markerGeometry = new THREE.SphereGeometry(0.1, 16, 16);
+      const markerMaterial = new THREE.MeshBasicMaterial({ color: 0xD4A017 });
+      const marker = new THREE.Mesh(markerGeometry, markerMaterial);
+      marker.position.set(x, y, z);
+      scene.add(marker);
+      
+      // Pulse effect
+      const pulseGeometry = new THREE.SphereGeometry(0.15, 16, 16);
+      const pulseMaterial = new THREE.MeshBasicMaterial({ 
+        color: 0xD4A017, 
+        transparent: true, 
+        opacity: 0.5 
+      });
+      const pulse = new THREE.Mesh(pulseGeometry, pulseMaterial);
+      pulse.position.set(x, y, z);
+      scene.add(pulse);
+      
+      gsap.to(pulse.scale, {
+        x: 2, y: 2, z: 2,
+        duration: 2,
+        repeat: -1,
+        ease: 'power1.inOut'
+      });
+      gsap.to(pulseMaterial, {
+        opacity: 0,
+        duration: 2,
+        repeat: -1,
+        ease: 'power1.inOut'
+      });
+    });
+    
+    camera.position.z = 15;
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.05;
+    controls.autoRotate = true;
+    controls.autoRotateSpeed = 0.5;
+    
+    function animate() {
+      requestAnimationFrame(animate);
+      controls.update();
+      renderer.render(scene, camera);
+    }
+    animate();
+    
+    // Handle resize
+    window.addEventListener('resize', () => {
+      camera.aspect = globeContainer.clientWidth / globeContainer.clientHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(globeContainer.clientWidth, globeContainer.clientHeight);
+    });
+    
+    // Leaflet Interactive Map
+    const map = L.map('export-map').setView([20, 0], 1);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+      attribution: '© OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    
+    const marketData = {
+      asia: { country: 'China', export: '180,000 MT', products: 'CPO, PKO, Olein', lat: 35.8617, lng: 104.1954 },
+      europe: { country: 'Germany', export: '25,000 MT', products: 'CPO, Palm Olein, PKO', lat: 51.1657, lng: 10.4515 },
+      'middle-east': { country: 'UAE', export: '45,000 MT', products: 'RBD Olein, Stearin', lat: 23.4241, lng: 53.8478 },
+      africa: { country: 'South Africa', export: '30,000 MT', products: 'CPO, Palm Olein', lat: -30.5595, lng: 22.9375 },
+      americas: { country: 'United States', export: '65,000 MT', products: 'CPO, Biodiesel Feed', lat: 37.0902, lng: -95.7129 }
+    };
+    
+    document.querySelectorAll('.market-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const region = this.getAttribute('data-region');
+        const data = marketData[region];
+        
+        document.getElementById('market-country').textContent = data.country;
+        document.getElementById('market-export').textContent = data.export;
+        document.getElementById('market-products').textContent = data.products;
+        
+        map.setView([data.lat, data.lng], 4);
+        
+        // Highlight active button
+        document.querySelectorAll('.market-btn').forEach(b => b.classList.remove('bg-white/10'));
+        this.classList.add('bg-white/10');
+      });
+    });
+    
+    // Add markers to leaflet map
+    Object.values(marketData).forEach(data => {
+      L.circleMarker([data.lat, data.lng], {
+        radius: 8,
+        fillColor: '#D4A017',
+        color: '#D4A017',
+        weight: 2,
+        opacity: 1,
+        fillOpacity: 0.7
+      }).addTo(map).bindPopup(`<b>${data.country}</b><br>${data.export}`);
+    });
+    
+    // Export Calculator
+    document.getElementById('calculate-btn').addEventListener('click', () => {
+      const quantity = parseInt(document.getElementById('calc-quantity').value);
+      const container = document.getElementById('calc-container').value;
+      const destination = document.getElementById('calc-destination').value;
+      
+      let containerCapacity = 21;
+      if (container === '40ft') containerCapacity = 26;
+      else if (container === 'flexitank') containerCapacity = 24;
+      else if (container === 'isotank') containerCapacity = 26;
+      
+      const containersNeeded = Math.ceil(quantity / containerCapacity);
+      
+      // Simple freight calculation (demo)
+      const freightRates = {
+        germany: 2500, netherlands: 2400, china: 1800, india: 1500,
+        usa: 3200, uae: 2000, 'south-africa': 2800
+      };
+      
+      const freightPerContainer = freightRates[destination] || 2500;
+      const totalFreight = containersNeeded * freightPerContainer;
+      
+      const deliveryTimes = {
+        germany: '18-22 Days', netherlands: '20-24 Days', china: '12-15 Days',
+        india: '10-14 Days', usa: '25-30 Days', uae: '14-18 Days', 'south-africa': '22-26 Days'
+      };
+      
+      document.getElementById('result-containers').textContent = containersNeeded;
+      document.getElementById('result-freight').textContent = '$' + totalFreight.toLocaleString();
+      document.getElementById('result-time').textContent = deliveryTimes[destination];
+      
+      // Animate results
+      gsap.from('#result-containers, #result-freight, #result-time', {
+        scale: 0.5,
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.1
+      });
+    });
+    
+    // Charts
+    const ctx1 = document.getElementById('growthChart').getContext('2d');
+    new Chart(ctx1, {
+      type: 'line',
+      data: {
+        labels: ['2020', '2021', '2022', '2023', '2024', '2025', '2026'],
+        datasets: [{
+          label: 'Export Volume (K MT)',
+          data: [280, 320, 385, 420, 480, 530, 580],
+          borderColor: '#D4A017',
+          backgroundColor: 'rgba(212, 160, 23, 0.1)',
+          tension: 0.4,
+          fill: true
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { labels: { color: '#fff' } } },
+        scales: {
+          y: { ticks: { color: '#fff' }, grid: { color: 'rgba(255,255,255,0.1)' } },
+          x: { ticks: { color: '#fff' }, grid: { color: 'rgba(255,255,255,0.1)' } }
+        }
+      }
+    });
+    
+    const ctx2 = document.getElementById('demandChart').getContext('2d');
+    new Chart(ctx2, {
+      type: 'doughnut',
+      data: {
+        labels: ['Asia', 'Europe', 'Middle East', 'Africa', 'Americas'],
+        datasets: [{
+          data: [45, 20, 15, 12, 8],
+          backgroundColor: ['#0F5132', '#D4A017', '#F4C430', '#0B1F33', '#1a5c3a'],
+          borderColor: '#0B1F33',
+          borderWidth: 2
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { labels: { color: '#fff' }, position: 'bottom' } }
+      }
+    });
+    
+    // Certificate Verification
+    document.getElementById('verify-cert-btn').addEventListener('click', () => {
+      const certInput = document.getElementById('cert-input').value;
+      if (certInput) {
+        document.getElementById('cert-result').classList.remove('hidden');
+        gsap.from('#cert-result', { y: 20, opacity: 0, duration: 0.5 });
+      }
+    });
+    
+    // Live Stats Update
+    setInterval(() => {
+      const production = document.getElementById('production-stat');
+      const shipment = document.getElementById('shipment-stat');
+      const containers = document.getElementById('container-stat');
+      
+      production.textContent = (parseInt(production.textContent.replace(',', '')) + Math.floor(Math.random() * 5)).toLocaleString();
+      shipment.textContent = (parseInt(shipment.textContent.replace(',', '')) + Math.floor(Math.random() * 3)).toLocaleString();
+      containers.textContent = 120 + Math.floor(Math.random() * 15);
+    }, 5000);
+    
+    // AI Chat Assistant
+    const chatToggle = document.getElementById('chat-toggle');
+    const chatWindow = document.getElementById('chat-window');
+    const chatClose = document.getElementById('chat-close');
+    const chatInput = document.getElementById('chat-input');
+    const chatSend = document.getElementById('chat-send');
+    const chatMessages = document.getElementById('chat-messages');
+    
+    chatToggle.addEventListener('click', () => {
+      chatWindow.classList.toggle('hidden');
+      gsap.from(chatWindow, { y: 20, opacity: 0, duration: 0.3 });
+    });
+    
+    chatClose.addEventListener('click', () => {
+      chatWindow.classList.add('hidden');
+    });
+    
+    const chatResponses = {
+      products: 'We offer Crude Palm Oil (CPO), Palm Kernel Oil, RBD Palm Olein, and Palm Stearin. All products are RSPO/ISPO certified with international quality standards. Which product would you like to know more about?',
+      export: 'We export to 50+ countries worldwide. Minimum order is typically 20MT per container. We handle all export documentation including COO, Phytosanitary, and RSPO certificates. Where would you like to ship?',
+      shipping: 'We offer FOB, CIF, and DDP shipping terms. Delivery times range from 10-30 days depending on destination. We use flexitanks, ISO tanks, and bulk vessels. What\'s your destination?',
+      certifications: 'We are certified by RSPO, ISPO, ISO 9001, HACCP, and GMP. All certificates can be verified on our platform. We also provide Halal and Kosher certifications upon request.'
+    };
+    
+    function addChatMessage(message, isUser = false) {
+      const messageDiv = document.createElement('div');
+      messageDiv.className = 'chat-bubble';
+      messageDiv.innerHTML = `
+        <div class="${isUser ? 'glass bg-gold/20 rounded-2xl rounded-tr-none ml-auto' : 'glass rounded-2xl rounded-tl-none'} p-4 max-w-[80%] ${isUser ? 'ml-auto' : ''}">
+          <p class="text-sm">${message}</p>
+        </div>
+      `;
+      chatMessages.appendChild(messageDiv);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+      
+      gsap.from(messageDiv, { y: 10, opacity: 0, duration: 0.3 });
+    }
+    
+    function sendChatMessage() {
+      const message = chatInput.value.trim();
+      if (message) {
+        addChatMessage(message, true);
+        chatInput.value = '';
+        
+        setTimeout(() => {
+          const responses = [
+            'Thank you for your inquiry! Our sales team will provide a detailed quote within 24 hours. For urgent requests, please contact us on WhatsApp.',
+            'I can help you with that. Would you like me to connect you with our export manager for a personalized consultation?',
+            'Based on your requirements, I recommend our RSPO certified CPO. Shall I prepare a quotation for you?'
+          ];
+          addChatMessage(responses[Math.floor(Math.random() * responses.length)]);
+        }, 1000);
+      }
+    }
+    
+    chatSend.addEventListener('click', sendChatMessage);
+    chatInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') sendChatMessage();
+    });
+    
+    document.querySelectorAll('.chat-option').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const option = this.getAttribute('data-option');
+        addChatMessage(this.textContent, true);
+        setTimeout(() => {
+          addChatMessage(chatResponses[option]);
+        }, 800);
+      });
+    });
+    
+    // Contact Form
+    document.getElementById('contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you for your message! Our team will contact you within 24 hours.');
+      e.target.reset();
+    });
+    
+    // Smooth scroll for anchor links (delegated + robust)
+    document.addEventListener('click', function(e) {
+      const a = e.target.closest('a');
+      if (!a) return;
+      const href = a.getAttribute('href');
+      // prevent generic empty anchors from jumping
+      if (!href || href === '#') {
+        e.preventDefault();
+        return;
+      }
+      if (href.startsWith('#')) {
+        const target = document.querySelector(href);
+        if (!target) {
+          e.preventDefault();
+          return;
+        }
+        e.preventDefault();
+        gsap.to(window, {
+          duration: 0.7,
+          scrollTo: {
+            y: target,
+            offsetY: 90
+          },
+          ease: 'power2.out'
+        });
+        if (mobileMenu) mobileMenu.classList.add('hidden');
+      }
+    }, { passive: false });
+    
+    // Section reveal animations on scroll (exclude hero section)
+    gsap.utils.toArray('section:not(#home)').forEach(section => {
+      gsap.from(section, {
+        scrollTrigger: {
+          trigger: section,
+          start: 'top 80%',
+          end: 'bottom 20%',
+          toggleActions: 'play none none reverse'
+        },
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power2.out',
+        stagger: 0.1
+      });
+    });
+    
+    // GSAP Animations
+    // Hero entrance animations disabled to avoid layout shift/jump issues
+    // gsap.from('#hero-title', { y: 50, opacity: 0, duration: 1, delay: 0.2 });
+    // gsap.from('#hero-subtitle', { y: 30, opacity: 0, duration: 1, delay: 0.4 });
+    
+    // Parallax effect
+    gsap.utils.toArray('.parallax-bg').forEach(section => {
+      gsap.to(section, {
+        yPercent: 20,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: section,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: true
+        }
+      });
+    });
+
+    // Interactive supply chain reveal and hover polish
+    gsap.from('.supply-step-button', {
+      scrollTrigger: {
+        trigger: '#about',
+        start: 'top 85%',
+        end: 'bottom 60%',
+        toggleActions: 'play none none reverse'
+      },
+      y: 30,
+      opacity: 0,
+      stagger: 0.1,
+      duration: 0.75,
+      ease: 'power3.out'
+    });
+
+    gsap.from('#detail-media', {
+      scrollTrigger: {
+        trigger: '#about',
+        start: 'top 80%',
+        toggleActions: 'play none none reverse'
+      },
+      y: 40,
+      opacity: 0,
+      duration: 0.85,
+      ease: 'power3.out'
+    });
+
+    gsap.from('.supply-info-card, .supply-detail-metric', {
+      scrollTrigger: {
+        trigger: '#about',
+        start: 'top 80%',
+        toggleActions: 'play none none reverse'
+      },
+      y: 30,
+      opacity: 0,
+      stagger: 0.08,
+      duration: 0.8,
+      ease: 'power3.out'
+    });
+
+    gsap.utils.toArray('.glass-dark').forEach(card => {
+      gsap.from(card, {
+        scrollTrigger: {
+          trigger: card,
+          start: 'top 90%',
+          toggleActions: 'play none none reverse'
+        },
+        y: 25,
+        opacity: 0,
+        duration: 0.75,
+        ease: 'power2.out'
+      });
+    });
+
+    supplyButtons.forEach(btn => {
+      btn.addEventListener('mouseenter', () => gsap.to(btn, { scale: 1.03, duration: 0.2, ease: 'power2.out' }));
+      btn.addEventListener('mouseleave', () => gsap.to(btn, { scale: 1, duration: 0.2, ease: 'power2.out' }));
+    });
+
+    // Subtle CTA pulse for the request quote button
+    // Removed hero scroll tween to prevent any jump or unwanted layout adjustment.
+    //gsap.to('#hero-title', {
+    //  scrollTrigger: {
+    //    trigger: '#home',
+    //    start: 'top top',
+    //    end: 'bottom top',
+    //    scrub: true
+    //  },
+    //  y: 15,
+    //  ease: 'power1.out'
+    //});
+  </script>
+<script>
+  // Force reload CPO image to bust cache so newly uploaded file displays immediately
+  (function(){
+    ['cpo-img','olein-img'].forEach(function(id){
+      var img = document.getElementById(id);
+      if(img){
+        try{
+          var base = img.getAttribute('src').split('?')[0];
+          img.src = base + '?v=' + Date.now();
+        }catch(e){/* ignore */}
+      }
+    });
+  })();
+</script>
+<script>(function(){document.addEventListener("click",function(e){var a=e.target.closest("[data-product-id]");if(!a)return;e.preventDefault();var pid=a.getAttribute("data-product-id");if(pid)parent.postMessage({type:"ecto-artifact-link-click",productId:pid},"*")})})();</script>
+</body>
+</html>
